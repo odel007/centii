@@ -1,0 +1,107 @@
+/* Pengaturan dasar dan latar belakang putih */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Mencegah scroll aneh saat tombol pindah */
+}
+
+/* Container utama (Mobile View) */
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; /* Ini membuatnya terlihat seperti mobile view */
+}
+
+/* Teks utama (Pink) */
+h1 {
+    color: #FF69B4; /* Warna Pink */
+    font-size: 1.5em;
+}
+
+.buttons {
+    margin-top: 30px;
+    position: relative; /* Penting untuk tombol "No" */
+    height: 100px; /* Beri ruang agar tombol bisa bergerak */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transisi untuk perpindahan tombol "No" */
+}
+
+/* Tombol Yes (Pink) */
+#yes-btn {
+    background-color: #FF69B4; /* Pink */
+    margin-right: 10px;
+}
+
+#yes-btn:hover {
+    background-color: #ff85c0;
+}
+
+/* Tombol No (Merah) */
+#no-btn {
+    background-color: #DC143C; /* Merah (Crimson) */
+    position: absolute; /* Ini kuncinya agar bisa dipindah-pindah */
+    /* Posisi awal akan diatur sedikit oleh JS */
+}
+
+/* --- Gaya untuk Pop-up (Modal) --- */
+
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang gelap transparan */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 30% auto; /* Posisikan di tengah */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+    color: #333;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+#modal-gif {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+}
